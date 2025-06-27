@@ -1,3 +1,11 @@
+Python installation on the AWS EC2 Linux machine (Kernel version 5.10)
+
+sudo yum install python3-pip git -y
+sudo pip3 install flask
+sudo pip3 install mysql-connector-python
+sudo pip3 install requests
+
+
 Database Schema creaion:
 --------------------------------------------------------------
 
