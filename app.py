@@ -31,9 +31,9 @@ def signup():
             return redirect(url_for('signup'))
 
         filename = None
-        if user_image and user_image.filename:
-            filename = secure_filename(user_image.filename)
-            user_image.save(os.path.join(upload_dir, filename))
+        if user_image:
+            filename = user_image.filename
+            user_image.save('static/uploads/' + filename)
 
         conn = get_db_connection()
         cursor = conn.cursor()
